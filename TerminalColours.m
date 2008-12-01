@@ -52,8 +52,9 @@ static NSString* colourKeys[] = {
 	[self performSelector:@selector(setScriptCursorColor:) withObject:[self performSelector:@selector(scriptCursorColor)]];
 	
 	// Saves the value
-	id prefsController = [NSClassFromString(@"TTAppPrefsController") sharedPreferencesController];
-	[prefsController observeValueForKeyPath:key ofObject:self change:nil context:NULL];
+	id cursorType = [values objectForKey:@"CursorType"];
+	[self setValue:[NSNumber numberWithInt:-1] forKey:@"CursorType"];
+	[self setValue:cursorType forKey:@"CursorType"];
 }
 
 - (id)colourForKey:(NSString*)key
