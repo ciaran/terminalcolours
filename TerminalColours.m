@@ -71,10 +71,10 @@ static NSString* colourKeys[] = {
 	{
 		// redColor → vtRedColour – these are NSColor category methods
 		// added by Terminal which return the default colours
-		NSString* key = [NSString stringWithFormat:@"vt%c%@Color",
+		NSString* valueKey = [NSString stringWithFormat:@"vt%c%@Color",
 			[key characterAtIndex:0] + ('A' - 'a'),
 			[key substringWithRange:NSMakeRange(1, [key length] - 7)]];
-		colour = [NSColor valueForKey:key];
+		colour = [NSColor valueForKey:valueKey];
 	}
 	return colour;
 }
