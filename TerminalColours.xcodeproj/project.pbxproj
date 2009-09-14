@@ -261,6 +261,7 @@
 				ARCHS = (
 					ppc,
 					i386,
+					x86_64,
 				);
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
