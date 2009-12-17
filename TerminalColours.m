@@ -152,6 +152,7 @@ static NSString* colourKeys[] = {
 		[configureButton setBezelStyle:NSRoundedBezelStyle];
 		[[configureButton cell] setControlSize:NSSmallControlSize];
 		[configureButton setTitle:@"More…"];
+		[configureButton setFont:[NSFont systemFontOfSize:11]];
 		[configureButton sizeToFit];
 		[configureButton setTarget:[TerminalColours sharedInstance]];
 		[configureButton setAction:@selector(orderFrontColourConfiguration:)];
